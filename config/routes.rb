@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   patch 'movies/:id', to: 'movies#update'
   delete 'movies/:id', to: 'movies#destroy'
   post 'favorite_movies/:id', to: 'favorite_movies#create', as: 'favorite_movie'
+  delete 'favorite_movies/:id', to: 'favorite_movies#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

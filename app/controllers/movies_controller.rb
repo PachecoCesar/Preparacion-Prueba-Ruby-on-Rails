@@ -1,7 +1,8 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
   def index
-    @movies = Movie.all
+    @regular_movies = Movie.where(favorite: false)
+    @favorite_movies = Movie.where(favorite: true)
   end
 
   def new; end
